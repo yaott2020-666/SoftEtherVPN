@@ -3,6 +3,8 @@ name: Build Source Release
 # Trigger whenever a release is created
 
 on:
+  release:
+    types: created
   push:
     branches:    
       - master
