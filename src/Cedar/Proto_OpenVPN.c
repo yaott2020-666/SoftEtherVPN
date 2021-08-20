@@ -2346,8 +2346,8 @@ void OvsRecvPacket(OPENVPN_SERVER *s, LIST *recv_packet_list, UINT protocol)
 								// Return the PUSH_REPLY
 								Format(option_str, sizeof(option_str),
 								       "PUSH_REPLY,ping %u,ping-restart %u",
-								       s->PingSendInterval / 1000,
-								       s->Timeout / 1000);
+								       s->PingSendInterval / 10000,
+								       s->Timeout / 120000);
 
 								if (se->Mode == OPENVPN_MODE_L3)
 								{
